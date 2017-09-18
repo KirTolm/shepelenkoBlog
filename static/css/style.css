@@ -1,0 +1,79 @@
+.nav {
+    background-color: #291D19;
+    padding: 0.3em 0 0.3em 0;
+
+}
+
+.chapters {
+    text-align: center;
+
+}
+
+.chapters a {
+    display: inline;
+    color: white;
+    margin: 0 1em 0 1em;
+
+}
+
+.chapters a:hover {
+    text-decoration: none;
+    color: grey;
+}
+
+.headerImg {
+    /max-width: 100%;
+    /height: 31em;
+    position: relative;
+    z-index: 1;
+
+}
+
+.headerTitle {
+    position: relative;
+    text-align: center;
+    font-size: 3.5em;
+    top: -8em;
+    color: #291D19;
+    z-index: 2;
+
+}
+
+.headerSubtitle {
+    position: relative;
+    text-align: center;
+    color: #291D19;
+    top: -28.5em;
+    z-index: 2;
+}
+
+.circleImg {
+    text-align: center;
+    position: relative;
+    top: -2.5em;
+
+}
+
+.header {
+
+
+
+}
+
+.img-circle {
+
+
+    margin: 0 1em 0 1em;
+}
+
+#wr2, #wr3 {
+    width: 35%;
+    /height: 25%;
+    display: inline;
+}
+
+#wr4 {
+    width: 35%;
+    /height: 25%;
+    display: inline;
+}

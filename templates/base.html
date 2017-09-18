@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet type=text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Valentin Shepelenko</title>
+</head>
+<body>
+
+    <div class="nav">
+        <div class="chapters">
+            <a class="main" href="{{ url_for('main') }}">Главная</a>
+            <a class="about" href="{{ url_for('about') }}">Обо мне</a>
+            <a class="gallery" href="{{ url_for('gallery') }}">Галерея</a>
+            <a class="contact" href="{{ url_for('contact') }}">Контакты</a>
+        </div>
+    </div>
+
+    <div class="header">
+        <img class="headerImg img-responsive" src="static/css/images/header.jpg"/>
+        <h1 class="headerTitle">ВАЛЕНТИН ШЕПЕЛЕНКО</h1>
+        <h5 class="headerSubtitle">Польские приключения</h5>
+
+    </div>
+
+    {% for message in get_flashed_messages() %}
+        <div class="flash">
+            <div class="alert alert-info alert-dismissable">
+                  <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+
+    {% block body %}
+    {% endblock %}
+
+    <div class="footer">
+
+        <div class="subscribe">
+
+            <p>Подпишись на рассылку</p>
+
+            <form class="subscribeForm" action="#">
+                <input class="form-control" placeholder="Укажите Ваш email">
+                <button type="submit">Подписаться</button>
+            </form>
+
+        </div>
+
+        <div class="networks">
+
+            <a class="vk"></a>
+            <a class="fb"></a>
+            <a class="inst"></a>
+
+        </div>
+
+        <div class="copyright">
+            <p>© 2017 • Вроцлав • Валентин Шепеленко • Все права защищены</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
